@@ -1,10 +1,12 @@
+const bodyParser = require("body-parser");
 const express=require("express");
 const app=express();
-app.get('/' , (req , res)=>{
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({extended:false}));
+const userroute=require("./routes/userroute/userroute")
 
-   res.send('hello from simple server :)')
+app.use("/user",userroute)
 
-})
 app.listen(4000,()=>{
     console.log("APP RUNNING AT PORT 4000")
 })
