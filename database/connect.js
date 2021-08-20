@@ -1,10 +1,9 @@
 const mysql=require("mysql");
 require("dotenv").config()
 let password=process.env.DB_PASSWORD
-const pool= mysql.createConnection({
-    user:"bishal",
-    host:"localhost",
-    database:"vayam",
-    password:password
-})
-module.exports= pool
+const Sequelize=require("sequelize");
+const sequelize = new Sequelize('vayam', 'bishal', "Cs190048", {
+    host: 'localhost',
+    dialect: "mysql"
+  });
+module.exports= sequelize

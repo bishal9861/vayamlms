@@ -3,10 +3,12 @@ const express=require("express");
 const app=express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:false}));
-const userroute=require("./routes/userroute/userroute")
+const sequelize=require("./database/connect")
+const userroute=require("./routes/userroute")
 
-app.use("/user",userroute)
+app.use(userroute)
 
 app.listen(4000,()=>{
+    
     console.log("APP RUNNING AT PORT 4000")
 })
