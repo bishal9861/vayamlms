@@ -1,0 +1,146 @@
+:root {
+    --clr-graylight: #d9eef3;
+    --clr-graymed: #78909c;
+    --clr-graydark: #37474f;
+    --clr-primary: #181515;
+    --clr-primaryhover: #f8fce4;
+    --clr-primaryfocus: #8ff4ec;
+    --clr-primarydark: #3d555c;
+    --radius: 0.5rem;
+    --padding: 1rem;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  /* html { 
+    background: url(https://wallpaperaccess.com/full/2314950.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+  } */
+  body {
+    background-image: linear-gradient(to right, #232526  , #2c3e50);
+    font-family: "Montserrat", sans-serif;
+    color: var(--clr-graydark);
+  }
+  
+  .wrapper {
+    background: rgb(75, 212, 190);
+    width: fit-content;
+    padding: 2rem;
+    border-radius: var(--radius);
+    margin: 4rem auto;
+  }
+
+  form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 50rem;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 1rem;
+
+  }
+  
+  .form-label {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .form-input {
+    border: none;
+    background-color: var(--clr-graylight);
+    border-radius: var(--radius);
+    padding: var(--padding);
+    font-family: inherit;
+    color: inherit;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+    transition: 250ms all ease-in;
+  }
+  
+  .form-input:hover {
+    border: 1px solid var(--clr-primaryhover);
+    box-shadow: 0 0 5px var(--clr-primaryhover);
+    background: white;
+  }
+  
+  .form-input:focus {
+    border: 1px solid var(--clr-primaryfocus);
+    box-shadow: 0 0 5px var(--clr-primaryhover);
+    background: white;
+  }
+  
+  .form-input::placeholder {
+    color: var(--clr-graymed);
+  }
+  
+  .btn-primary {
+    border: none;
+    background: var(--clr-primary);
+    color: white;
+    border-radius: var(--radius);
+    padding: var(--padding);
+    margin-top: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    width: 12rem;
+    position: relative;
+    transition: 250ms all ease-in;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--clr-primarydark);
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .wrapper {
+      margin: 1rem;
+    }
+    .grid-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 20rem;
+    }
+  }
+  
+  @media only screen and (max-width: 356px) {
+    .wrapper {
+      margin: 0.5rem;
+    }
+    .grid-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+  
