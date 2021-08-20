@@ -7,7 +7,7 @@ exports.userLogin=(req,res,next)=>{
       
 }
 exports.userSignup=(req,res,next)=>{
-    res.send("SIGN UP PAGE")
+    res.render('usersignup.ejs')
 }
 exports.userLogged=(req,res,next)=>{
     const {loginid,loginpassword}=req.body;
