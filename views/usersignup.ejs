@@ -1,72 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700">
-  <link rel="stylesheet" href="/css/usersignup.css">
-  <title>signUp_page</title>
+  <title>UserDetails</title>
+  <link rel="stylesheet" type="text/css" href="/css/otp.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-  <body>
-    <div class="wrapper">
-      <form class="form-container">
-        <h1 class='title'>Sign Up</h1>
-        <p class='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error molestiae omnis minus.</p>
-        <div class="grid-wrapper">
-          <div class="form-group">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-input" placeholder="Enter your name">
-          </div>
-          <div class="form-group">
-            <label for="name" class="form-label">User Name</label>
-            <input type="text" class="form-input" placeholder="Enter your User name">
-          </div>
-          <div class="form-group">
-            <label for="name" class="form-label">Phone Number</label>
-            <input type="number" class="form-input" placeholder="Enter your Phone Number">
-          </div>
-          <div class="form-group">
-            <label for="name" class="form-label">Gender</label>
-            <select id="gender" class="form-input">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-  
-          <div class="form-group">
-            <label for="name" class="form-label">Date of Birth</label>
-            <input type="date" name="begin" class="form-input" placeholder="dd-mm-yyyy" value="" min="1997-01-01"
-              max="2030-12-31">
-          </div>
-          <div class="form-group">
-            <label for="name" class="form-label">Location(City, State)</label>
-            <input type="text" class="form-input" placeholder="Enter your City, State">
-          </div>
-          <div class="form-group">
-            <label for="email" class="form-label">Email</label>
-            <input type="text" class="form-input" placeholder="Enter your email">
-          </div>
-          <div class="form-group">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-input" placeholder="Enter your Password">
-          </div>
-        </div>
-        <div class="btn-container">
-          <input type="submit" class="btn-primary" value="Submit">
-        </div>
+  <div class="container">
+    <div class="img">
+      <img src="/images/userDeatils.svg">
     </div>
-    <!--end of wrapper-->
-  </body>
-  
+    <div class="scroll">
+    <div class="otp-content">
+      <form action="otp-verification-screen.html">
+        <img src="/images/avatar.svg">
+        <h2 class="title">User Details</h2>
+        <div class="input-div one">
+          <div class="i">
+            <i class="fas fa-user-circle"></i>
+          </div>
+          <div class="div">
+            <h5>Name of Student</h5>
+            <input type="text" class="input">
+          </div>
+        </div>
+        <div class="input-div one">
+          <div class="i">
+            <i class="fas fa-at"></i>
+          </div>
+          <div class="div">
+            <h5>Email Id</h5>
+            <input type="text" class="input">
+          </div>
+        </div>
+        <div class="input-div one">
+          <div class="i">
+            <i class="fas fa-key"></i>
+          </div>
+          <div class="div">
+            <h5>Password</h5>
+            <input type="password" class="input">
+          </div>
+        </div>
+        <div class="input-div one">
+          <div class="i">
+            <i class="fas fa-school"></i>
+          </div>
+          <div class="div">
+            <h5>School Name</h5>
+            <input type="text" class="input">
+          </div>
+        </div>
+        <div class="input-div one">
+          <div class="i">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <div class="div">
+            <!-- <h5>Date of Birth</h5> -->
+            <input class="input" type="date" min="1997-01-01" max="2030-12-31">
+          </div>
+        </div>
+        <div class="input-div one">
+          <div class="i">
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="div">
+            <h5>Gender</h5>
+            <input type="text" class="input">
+          </div>
+        </div>
+        <input type="submit" class="btn" value="submit">
+
+      </form>
+    </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="/js/userotp.js"></script>
 </body>
+
 </html>
-
-
-
-
-
-
-
