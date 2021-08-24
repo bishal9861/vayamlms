@@ -9,9 +9,7 @@ exports.userSignup=(req,res,next)=>{
     res.render('usersignup.ejs')
 }
 
-exports.userOtp=(req,res,next)=>{
-    res.render("otp.ejs")
-}
+
 exports.userLoginFunction=(req,res,next)=>{
     const {loginemail,loginpassword}=req.body;
     console.log(loginemail)
