@@ -2,7 +2,7 @@ const Sequelize=require("sequelize");
 const sequelize=require("../database/connect")
 const Student=sequelize.define("student",{
     stud_id:{
-        type:Sequelize.INTEGER,
+        type:Sequelize.BIGINT,
         
         primaryKey:true,
         allowNull:false

@@ -5,6 +5,8 @@ const userfunction=require("../controller/function.js")
 
 route.get('/login' ,userfunction.userLogin )
 route.get("/signup",userfunction.userSignup)
-route.post("/loggedIn",userfunction.userLogged)
+route.post("/loginfunction",userfunction.userLoginFunction)
+
+
 
 module.exports= route;
