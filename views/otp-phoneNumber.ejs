@@ -11,11 +11,11 @@
 <body>
 	<div class="container">
 		<div class="img">
-			<img src="img/authentication.svg">
+			<img src="images/authentication.svg">
 		</div>
 		<div class="otp-content">
-			<form action="otp-verification-screen.html">
-				<img src="img/avatar.svg">
+			<form action="/sendOtp" method="POST">
+				<img src="/images/avatar.svg">
 				<h2 class="title">Sign Up</h2>
            		<div class="input-div one">
            		   <div class="i">
@@ -23,7 +23,7 @@
            		   </div>
            		   <div class="div">
            		   		<h5>Phone Number</h5>
-           		   		<input type="text" class="input" maxlength="10">
+           		   		<input type="text" class="input" maxlength="10" name="phNumber">
            		   </div>
            		</div>
 				   <input type="submit" class="btn" value="Get Otp">

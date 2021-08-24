@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Otp sign up page</title>
+	<link rel="stylesheet" type="text/css" href="/css/otp.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container">
+		<div class="img">
+			<img src="/images/authentication.svg">
+		</div>
+		<div class="otp-content">
+			<form action="/otpverification/<%=data%>/number/<%=number%>" method="POST">
+				<img src="/images/avatar.svg">
+				<h2 class="title">Sign Up</h2>
+           		<!-- <div class="input-div one">
+           		   <div class="i">
+					<i class="fas fa-phone-alt"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Phone Number</h5>
+           		   		<input type="text" class="input" maxlength="10" onkeypress="return event.keyCode >=96 && event.keyCode<=105">
+           		   </div>
+           		</div>
+				   <input type="submit" class="btn" value="Get Otp"> -->
+           		<div class="otp-container">
+					   <h3>Enter Otp</h3>
+           		    	<input class="otp-input" id="text1" name="s1" onkeydown="movetoNext('text1',this, 'text2',event)" type="text" maxlength="1">
+           		    	<input class="otp-input" id="text2" name="s2" onkeydown="movetoNext('text1', this, 'text3', event)" type="text" maxlength="1">
+           		    	<input class="otp-input" id="text3" name="s3" onkeydown="movetoNext('text2', this, 'text4', event)" type="text" maxlength="1">
+           		    	<input class="otp-input" id="text4" name="s4" onkeydown="movetoNext('text3', this, 'text4', event)" type="text" maxlength="1">
+            	   </div>
+            	<a href="#">Resend otp</a>
+            	<input type="submit" class="btn" value="Verify">
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="/js/main.js"></script>
+</body>
+</html>
