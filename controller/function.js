@@ -8,8 +8,6 @@ exports.userLogin=(req,res,next)=>{
 exports.userSignup=(req,res,next)=>{
     res.render('usersignup.ejs')
 }
-
-
 exports.userLoginFunction=(req,res,next)=>{
     const {loginemail,loginpassword}=req.body;
     console.log(loginemail)
@@ -30,7 +28,4 @@ exports.userLoginFunction=(req,res,next)=>{
     }).catch(error=>{
         console.log(error)
     })
-    
-    
-    
 }
