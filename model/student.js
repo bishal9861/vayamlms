@@ -49,7 +49,8 @@ const Student=sequelize.define("student",{
         allowNull:true
     }
 
-
+//add school name
+//remove student user name
 
 })
 

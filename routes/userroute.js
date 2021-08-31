@@ -9,6 +9,9 @@ route.post("/loginfunction",userfunction.userLoginFunction)
 route.get("/getOtp",userfunction.getUserOtp)
 route.post("/sendOtp",userfunction.sendOtpFunction)
 route.post("/otpverification/:otp/number/:number",userfunction.otpVerification)
+//route.get("/addQ",userfunction.addQuestion)
+route.get("/getMiTest",userfunction.getMiTest)
+route.post("/checkMiTest",userfunction.checkmitest)
 
 
 

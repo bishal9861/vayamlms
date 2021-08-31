@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>miresult</title>
+        <style>
+            ul{
+                list-style-type: none;
+                width:fit-content;
+                margin: 0 auto;
+                border-radius: 7px;
+                border: 8px solid #FCCD04;
+                padding: 28px;
+                box-shadow: 2px 2px 8px silver ;
+                background: #17E9E0;
+            }
+            li{
+                text-align: left;
+                font-size: 25px;
+                line-height: 40px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 700;
+                color: #a343c9;
+
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <div>
+            <ul>
+                <li>Linguistic/Verbal:<%=resultdata.type1%>/<%=eachTypeTotal.t1%></li>
+                <li>Logical/Mathematical:<%=resultdata.type2%>/<%=eachTypeTotal.t2%></li>
+                <li>Musical:<%=resultdata.type3%>/<%=eachTypeTotal.t3%></li>
+                <li>Spatial/Visual:<%=resultdata.type4%>/<%=eachTypeTotal.t4%></li>
+                <li>Bodil/Kinesthetic:<%=resultdata.type5%>/<%=eachTypeTotal.t5%></li>
+                <li>Intrapersonal:<%=resultdata.type6%>/<%=eachTypeTotal.t6%></li>
+                <li>Interpersonal:<%=resultdata.type7%>/<%=eachTypeTotal.t7%></li>
+                <li>Naturalist:<%=resultdata.type8%>/<%=eachTypeTotal.t8%></li>
+                <li>Existential:<%=resultdata.type9%>/<%=eachTypeTotal.t9%></li>
+
+            </ul>
+      
+        </div>
+
+
+    </body>
+
+</html>

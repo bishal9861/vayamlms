@@ -6,9 +6,19 @@ app.use(bodyParser.urlencoded({extended:false}));
 const sequelize=require("./database/connect")
 const userroute=require("./routes/userroute")
 
+const mongoose=require("mongoose")
+
 app.use(userroute)
 
-app.listen(4000,()=>{
-    
-    console.log("APP RUNNING AT PORT 4000")
-})
+
+mongoose.connect("mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false").then(
+    result=>{
+        //console.log(result)
+        console.log("APP RUNNING AT PORT 4000")
+        app.listen(4000)
+    }
+).catch(
+    err=>{
+        console.log(err)
+    }
+)
