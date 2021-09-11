@@ -1,63 +1,256 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>TEST</title> 
-        <style>
-            ul{
-                list-style: none;
-            }
-            li{
-                color: #a343c9;
-                font-family: Arial, Helvetica, sans-serif;
-                font-weight: 600;
-                font-size: 17px;
-            }
-            form{
-                width: 50%;
-                margin: 0 auto;
-                /*background: #FCCD04;*/
-                background: #17E9E0;
-                padding-top: 10px;
-            }
-            .st1{
-                border:1px solid #F5E6CC;
-            }
-            .st2{
-                font-family: Arial, Helvetica, sans-serif;
-                font-weight: 400;
-                
-                color: #a343c9;
-            }
-            #checkbtn{
-                margin-left: 41%;
-                margin-bottom: 30px;
-                padding: 10px 19px;
-                font-size: 20px;
-                border: none;
-                border-radius: 8px;
-                background: #FCCD04;
-                font-weight: 500;
-                color: #a343c9;
-                
-            }
-        </style>
-    </head>
-    <body>
-        <div>
-            <form action="/checkMiTest" method="POST">
-                <ul>
-                    <% Questions.forEach(element => {%>
-                        <li><%=element.name%></li>
-                        <label for="yesbtn" class="st2">Yes</label>
-                        <input type="checkbox" name="val" value="yes" id="yesbtn" class="st1">
-                        <label for="nobtn" class="st2">No</label>
-                        <input type="checkbox" name="val" value="no" id="nobtn" class="st1">
-                        
-                    <%});%>
-                </ul>
-                <input type="submit" value="CHECK" id="checkbtn">
-            </form>
-            <script src="/js/mitest.js"></script>
-        </div>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- font awesome file link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+  <link rel="stylesheet" href="/css/miTest.css">
+<!-- jquery file link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<script src="/js/miTest.js"></script>
+
+  <title>MI-Test</title>
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header class="header">
+
+<a href="#" class="logo"><img src="/images/CurosityParkLogo.jpeg" class="logo-name"></a>
+
+
+<div class="fas fa-bars"></div>
+
+
+<nav class="navbar">
+  <ul>
+    <li><a href="/views/home page.ejs">home</a></li>
+    <li><a href="#calender">Calender</a></li>
+    <li><a href="/views/courses/courses.ejs">Course</a></li>
+    <li><a href="#team">MI Test</a></li>
+    <li><a href="#contact">My Profile</a></li>
+    <li><a id="login" href="#">Login</a></li>
+
+  </ul>
+</nav>
+
+
+</header>
+
+
+<!-- header section ends -->
+
+
+<!-- miTest section starts  -->
+
+<section id="miTest-heading" class="miTest-heading">
+
+
+<div class="row">
+
+  <div class="content">
+    <h3>Multiple Intelligence Test
+    </h3>
+    <p>Multiple Intelligence (MI) is a theory of ‘Education and Cognitive Sciences’ which suggests that humans have numerous relatively discrete intellectual capacities. The theory is proposed by prof Haward Gardner challenging the traditional notion of intelligence which described intelligence as the uniform cognitive capacity of the brain.</p>
+    <a href="/getMiTestQ"><button  class="btn">Take Free MI Test</button></a>
+  </div>
+
+  <div class="image">
+    <img src="/images/miTest-test.svg" alt="">
+  </div>
+
+</div>
+
+
+</section>
+
+<!-- miTest section ends  -->
+
+<!-- skills section starts  -->
+<section id="skills" class="skills">
+
+<h1 class="heading">Skills</h1>
+
+<div class="row">
+
+  <div class="image">
+    <img src="/images/MITest-Spatial.svg" alt="">
+  </div>
+  <div class="content">
+    <h3>SPATIAL</h3>
+    <p>The people who are good at conceptualising and orchestrating spatial arrays have strong Spatial Intelligence. They are visual learners and organise things spatially. They like to see things to understand them. Graphs, maps, illustrations, tables, art, and puzzles are fun for them.
+      </p>
+    <a href="#"><button class="btn">read more</button></a>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="content">
+    <h3>LINGUISTIC</h3>
+    <p>The people are good at listening, speaking, reading, and writing and possess a good sense of the meaning of words, their rhythm, and sound have strong Linguistic Intelligence. These people are always ahead in traditional classrooms and generally have good oratory skills. 
+      </p>
+    <a href="#"><button class="btn">read more</button></a>
+  </div>
+  <div class="image">
+    <img src="/images/MITest-Linguistic.svg">
+  </div>
+
+</div>
+
+<div class="row">
+
+  
+  <div class="image">
+    <img src="/images/MITest-Logical.svg" alt="">
+  </div>
+  <div class="content">
+    <h3>LOGICAL</h3>
+    <p>The people who are good at conceptualizing logical relations among actions or symbols have strong Logical/Mathematical Intelligence. These people display an aptitude for numbers, reasoning, and problem-solving.
+      .</p>
+    <a href="#"><button class="btn">read more</button></a>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="content">
+    <h3>KINESTHETIC</h3>
+    <p>People with strong Kinesthetic Intelligence display a great body balance and can use their whole body or parts of the body in a coordinated movement.  They learn best through physical activities, games, and movements.
+      </p>
+    <a href="#"><button class="btn">read more</button></a>
+  </div>
+  <div class="image">
+    <img src="/images/MITest-Kinesthetic.svg">
+  </div>
+
+</div>
+<div class="row">
+
+  <div class="image">
+    <img src="/images/MITest-Rhythmic.svg" alt="">
+  </div>
+  <div class="content">
+    <h3>RHYTHMIC</h3>
+    <p>The people who are good at understanding musical expressions and display sensitivity towards rhythm, pitch, meter, tone, melody, and timbre have strong Musical Intelligence. These people may entail the ability to sing or play an instrument. 
+      </p>
+    <a href="#"><button class="btn">read more</button></a>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="content">
+    <h3>INTRAPERSONAL
+    </h3>
+    <p>Those with higher Intrapersonal Intelligence have higher self-awareness than others. They reflect on their feelings, values, and ideas. They are also quite intuitive. Intrapersonal Intelligence does not indicate any particular profession, rather it establishes goals for every individual. 
+      </p>
+    <a href="#"><button class="btn">read more</button></a>
+  </div>
+  <div class="image">
+    <img src="/images/MITest-Intrapersonal.svg">
+  </div>
+
+</div>
+
+<div class="row">
+
+  
+  <div class="image">
+    <img src="/images/MITest-Interpersonal.svg" alt="">
+  </div>
+  <div class="content">
+    <h3>INTERPERSONAL
+    </h3>
+    <p>Those who are inherently people-oriented and like expressing themselves with others have strong Interpersonal Intelligence. These people are cooperative with others and enjoy learning in groups. 
+      </p>
+    <a href="#"><button class="btn">read more</button></a>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="content">
+    <h3>NATURALIST
+    </h3>
+    <p>Those who love nature more than anything else and enjoy playing with animals and taking field trips have strong Naturalistic Intelligence. They are good at making the consequential distinction in the world of nature, for example, one plant from another or different patterns in nature.
+      </p>
+    <a href="#"><button class="btn">read more</button></a>
+  </div>
+  <div class="image">
+    <img src="/images/MITest-Naturalist.svg">
+  </div>
+
+</div>
+</section> 
+
+
+<!-- skills section ends -->
+
+<!-- contact section starts  --> 
+<section id="contact" class="contact">
+
+<h1 class="heading">contact us</h1>
+
+
+<div class="row">
+
+  <div class="image">
+    <img src="/images/contactUs.svg" alt="">
+  </div>
+
+  <div class="form-container">
+    <form action="">
+
+      <div class="inputBox">
+        <input type="text" placeholder="first name">
+        <input type="text" placeholder="last name">
+      </div>
+
+      <input type="email" placeholder="email">
+      <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
+      <input type="submit" value="send">
+
+    </form>
+  </div>
+
+</div>
+
+</section> 
+
+<!-- contact section ends -->
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+<h1>CurosityPark | all rights reserved.</h1>
+
+<div class="icons">
+  <a href="https://www.facebook.com/curiositypark/" class="fab fa-facebook-f"></a>
+  <a href="https://twitter.com/curiosity_park" class="fab fa-twitter"></a>
+  <a href="https://www.instagram.com/curiositypark_official/" class="fab fa-instagram"></a>
+  <a herf="#" class="fab fa-whatsapp"></a>
+</div>
+
+</section> -->
+
+
+<!-- footer section ends-->
+
+
+
+  
+</body>
 </html>
